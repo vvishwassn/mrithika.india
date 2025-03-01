@@ -1,0 +1,362 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    color: #666;
+    text-align: center;
+}
+
+/* Styles for the image slider */
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: auto; /* Ensure images maintain aspect ratio */
+    display: none;
+    transition: opacity 1s ease-in-out; /* Add transition for slide effect */
+}
+
+.slider img.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Styles for the image below the bar */
+.image-below-bar {
+    width: 100%;
+    display: block;
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    border: none; /* Ensure no border */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+}
+
+/* Increase image size for mobile screens */
+@media (max-width: 600px) {
+    .image-below-bar {
+        width: 100%; /* Ensure the image fits within the screen width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Styles for the image below the search bar */
+.image-below-search {
+    width: 100%;
+    display: block;
+    margin: 20px 0; /* Add margin to separate from other elements */
+    padding: 0; /* Remove any padding */
+    border: none; /* Ensure no border */
+}
+
+/* Styles for the text below the image */
+.text-below-image {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300; /* Thin text */
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Styles for the search bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 10px; /* Add padding to ensure proper visibility on mobile screens */
+}
+
+.search-bar {
+    width: 100%; /* Ensure full width for mobile screens */
+    max-width: 600px;
+    display: flex;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 8px 8px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 25px 0 0 25px;
+}
+
+.search-bar button {
+    padding: 1px 6px;
+    border: none;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+}
+
+.search-bar button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Adjust search bar size for mobile screens */
+@media (max-width: 600px) {
+    .search-bar {
+        width: 100%; /* Further adjust width for mobile screens */
+    }
+}
+
+/* Styles for the product boxes */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.product-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.product-box img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.product-name {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Styles for the square edge section */
+.square-edge-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.square-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 23%; /* Four boxes in horizontal for desktop screens */
+    margin: 1%;
+    text-align: center;
+    padding: 67.5px; /* Increase padding to increase height by an additional 50% */
+    font-size: 1.2em;
+    border-radius: 15px; /* Add curved edges */
+}
+
+.square-box img {
+    width: 100%;
+    height: auto; /* Ensure images maintain aspect ratio */
+    border-radius: 15px; /* Match the box's curved edges */
+}
+
+@media (max-width: 600px) {
+    .square-box {
+        width: 48%; /* Two boxes in horizontal for mobile screens */
+        padding: 67.5px; /* Increase padding to increase height by an additional 50% */
+        border-radius: 15px; /* Add curved edges */
+    }
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four images per row for desktop screens */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-grid img {
+    width: 360px;
+    height: 451px;
+    margin: 10px;
+}
+
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two images per row for mobile screens */
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four images per row for desktop screens */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.product-item {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.product-item img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.product-info p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two images per row for mobile screens */
+    }
+    .slider {
+        display: none; /* Hide the slider for mobile screens */
+    }
+}
+
+.call-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 42px; /* Reduce size to 30% */
+    height: 42px; /* Reduce size to 30% */
+    background-color: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    animation: float 2s infinite; /* Add floating animation */
+}
+
+.call-button img {
+    width: 21px; /* Reduce size to 30% */
+    height: 21px; /* Reduce size to 30% */
+}
+
+.call-button:hover {
+    background-color: #45a049;
+}
+
+.instagram-button {
+    position: fixed;
+    bottom: 80px; /* Adjust position to be above the call button */
+    right: 20px;
+    width: 42px; /* Same size as call button */
+    height: 42px; /* Same size as call button */
+    background-color: #E1306C; /* Instagram color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    animation: float 2s infinite; /* Add floating animation */
+}
+
+.instagram-button img {
+    width: 21px; /* Same size as call button */
+    height: 21px; /* Same size as call button */
+}
+
+.instagram-button:hover {
+    background-color: #C13584; /* Darker Instagram color on hover */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Move up by 5px */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    color: #666;
+    border-top: 1px solid #ccc;
+}
+
+.footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer li {
+    margin: 10px 0; /* Add margin for spacing between items */
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.buy-now-button {
